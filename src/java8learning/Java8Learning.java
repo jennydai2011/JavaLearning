@@ -5,6 +5,8 @@
  */
 package java8learning;
 
+import java.util.stream.IntStream;
+
 /**
  *
  * @author Tony
@@ -19,15 +21,17 @@ public class Java8Learning {
         System.out.println(isPrime(2));
         System.out.println(isPrime(3));
         System.out.println(isPrime(4));
-                
+
     }
 
     private static boolean isPrime(final int number) {
-        for(int i=2; i< number; i++){
-            if(number %i==0) return false;
-        }
-        
-        return number >1;
+//        for(int i=2; i< number; i++){
+//            if(number %i==0) return false;
+//        }
+//        
+//        return number >1;
+
+        return number > 1 && IntStream.range(2, number).noneMatch(index -> number % index == 1);
     }
-    
+
 }
