@@ -5,6 +5,7 @@
  */
 package java8learning;
 
+import java.util.function.Predicate;
 import java.util.stream.IntStream;
 
 /**
@@ -23,15 +24,13 @@ public class Java8Learning {
         System.out.println(isPrime(4));
 
     }
-
+    
     private static boolean isPrime(final int number) {
-//        for(int i=2; i< number; i++){
-//            if(number %i==0) return false;
-//        }
-//        
-//        return number >1;
+           Predicate<Integer> isDivisible=  divisor -> number % divisor ==0;
 
-        return number > 1 && IntStream.range(2, number).noneMatch(index -> number % index == 1);
+        return number > 1 && IntStream.range(2, number).noneMatch(index -> number % index == 0);
+        
+        
     }
 
 }
