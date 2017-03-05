@@ -9,7 +9,9 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.MonthDay;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import javax.swing.text.DateFormatter;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
@@ -76,5 +78,21 @@ public class DateTimeTest {
         LocalDate today = LocalDate.now();
         System.out.println("2 weeks later:"+today.plus(2, ChronoUnit.WEEKS));
         
+    }
+    
+    @Test
+    public void getDateFromString(){
+        String dayAfterTomorrow = "20170306";
+        LocalDate formatted = LocalDate.parse(dayAfterTomorrow, DateTimeFormatter.BASIC_ISO_DATE);
+        System.out.printf("Date genereated from string %s is %s %n", dayAfterTomorrow, formatted);
+        
+    }
+    
+    @Test
+    public void getDateFromAnyFormat(){
+        String goodFriday ="Apr 18 2014";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd yyyy");
+        LocalDate holiday = LocalDate.parse(goodFriday, formatter);
+        System.out.println("holiday is:"+holiday);
     }
 }
