@@ -35,3 +35,11 @@
     #852 - peak index in a mountain array
     #1011 - capacity to ship packages within D days
     #1292 - maximum side length of a square with sum less than or euqal to threshold
+
+ # Linked list
+   - double pointer
+   - recursion
+      . ask subproblem to return result
+      . do something at current recursion level
+      . return result
+      . repeat
