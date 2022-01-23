@@ -4,13 +4,13 @@
   . processed, not needed, unknown
   
   leetcode#
-  #344 - Reverse string - 数组下标倒序，对称替换
-  #26- Remove duplicated From sorted array - slow/fast pointer, if fast=slow, fast++, slow不变;不等时替换 arr[slow++]=arr[fast++]
-  #11 - container with most water
-  #42 - trapping rain water
-  #293 - moving zeros
-  #80 - remove duplicates from sorted arry
-  #1047 - remove all adjacent duplication in string
+  。344 - Reverse string - 数组下标倒序，对称替换
+  。26- Remove duplicated From sorted array - slow/fast pointer, if fast=slow, fast++, slow不变;不等时替换 arr[slow++]=arr[fast++]
+  。11 - container with most water
+  。42 - trapping rain water
+  。293 - moving zeros
+  。80 - remove duplicates from sorted arry
+  。1047 - remove all adjacent duplication in string
   
 # Binary search
   - 是一个在有序范围内实现搜索的算法，O(logN)
@@ -43,3 +43,8 @@
       。do something at current recursion level
         - return result
         - repeat
+   - similar questions:
+      - #237 delete node in a linked list
+      - #141 linked list cycle. solution:2 pointers, V(fast) = 2V(slow), when slow==fast, return true
+      - #92 reverse linked list II
+      - #25 reverse linked list in group 
