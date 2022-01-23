@@ -39,7 +39,7 @@
  # Linked list
    - double pointer
    - recursion
-      . ask subproblem to return result
-      . do something at current recursion level
-      . return result
-      . repeat
+      。ask subproblem to return result
+      。do something at current recursion level
+        - return result
+        - repeat
