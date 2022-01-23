@@ -48,3 +48,43 @@
       - #141 linked list cycle. solution:2 pointers, V(fast) = 2V(slow), when slow==fast, return true
       - #92 reverse linked list II
       - #25 reverse linked list in group 
+
+# stack
+  - principal -- define stack
+    - arr[i] 左侧所有比arr【i]
+    - 递归之前的状态
+  - similar questions:
+     -#20  Valid parentheses
+     -#496 Next greater element I
+     -#503 next greater element II
+     -#394 Decode string
+     -#636 Exclusive Time of Functions
+     -#84 Largest Rectangle in Histogram
+ # heap
+ - heap 适用于求解第K大的元素
+ - common APIs:
+    - peek  ->查看堆顶元素 O(1)
+    - poll  ->拿出堆顶元素 o(logn)
+    - offer ->添加元素 O(logn)
+ - 3种解法
+    - sorting O(logn)
+    - max heap O(n+klogn)
+    - min heap O(nlogk)
+  - #215 (kth larget element in an array) -- min heap solution general steps
+    - initialize a min heap
+    - for each element x in the array
+      - offer to heap if heap size < k or x>=top of heap
+      - adjust heap size if necessary
+    - return the top of heap    
+  - #23 merge k sorted list
+    - 1. initialize min heap with all List head references
+    - 2. while heap is not empty
+      - a. pull ouf top of heap( smallest pointer)
+      - b. add it to result list
+      - c. Add its next node if there exists 
+    - Similar questions
+      -#347 Top K frequent elements 
+      -#253  Meeting roos II
+      -#295 Find median From data stream
+      -#767 Reorganzie String
+      -#703 Kth largest element in a stream
