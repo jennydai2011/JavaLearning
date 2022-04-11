@@ -1,6 +1,6 @@
 # 链表
   -  BM1 反转链表
-    *  思路：三指针- insert dummy head, pre/cur/next, cur.next=pre, 
+    --  思路：三指针- insert dummy head, pre/cur/next, cur.next=pre, 
   -  BM2 链表内指定区间翻转
           *  思路：五指针- cache 区间头尾，翻转区间，链接头尾after翻转
   -  BM3 链表中的节点每k个一组翻转
